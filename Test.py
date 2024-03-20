@@ -1,8 +1,7 @@
-import machine, neopixel
+from neopixel import Neopixel
 
-np = neopixel.NeoPixel(machine.Pin(0), 4)
+pixels = Neopixel(10, 0, 0, "RGB")
 
-np[0] = (35,44,0)
-np[1] = (55,0,100)
+pixels.fill((100,0,150))
 
-np.write()
+pixels.show()
