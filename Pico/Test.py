@@ -18,7 +18,7 @@ def ShowArt(art):
     artFileName = art + '_ARRAY.npy'
     #artFile = open(artFileName, 'r')
     #print(artFile)
-    artArr = np.load(artFileName)
+    artArr = np.chararray.load(artFileName)
     print('yay')
     for i in range(PixelHight):
         for j in range(PixelWidth):
