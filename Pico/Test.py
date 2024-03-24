@@ -12,7 +12,7 @@ PixelHight = 8 #how many pixels tall
 PixelArr = np.arange(PixelNum).reshape((PixelHight, PixelWidth)) #creates an array of pixels with the proper dimensions
 
 #defines neopixel object
-pixels = Neopixel(PixelNum, 0, 0, "RGB") #Neopixel(number of LED's, state machine ID, GPIO number, mode(RGB or RGBW))
+pixels = Neopixel(PixelNum, 0, 0, "GRB") #Neopixel(number of LED's, state machine ID, GPIO number, mode(RGB or RGBW))
 
 def ShowArt(art):
     artFileName = art + '_ARRAY.npy'
