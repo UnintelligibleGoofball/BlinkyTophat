@@ -14,9 +14,10 @@ pixels = Neopixel(PixelNum, 0, 0, "RGB") #Neopixel(number of LED's, state machin
 
 def ShowArt(art):
     artFileName = art + '_ARRAY.npy'
-    artFile = open(artFileName, 'r')
-    artArr = np.load(artFileName, dtype=object)
-    print(artArr)
+    #artFile = open(artFileName, 'r')
+    #print(artFile)
+    artArr = np.load(artFileName)
+    print('yay')
     for i in range(PixelHight):
         for j in range(PixelWidth):
             pixels.set_pixel(PixelArr[i][j], (artArr[i][j][0], artArr[i][j][1], artArr[i][j][2]))
